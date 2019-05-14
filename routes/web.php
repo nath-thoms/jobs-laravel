@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+// Original homepage Route
+// Route::get('/', function () {
+//     return view('homepage');
+// });
+
+Route::get('/', 'JobController@index');
 
 Auth::routes();
 

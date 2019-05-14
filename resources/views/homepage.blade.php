@@ -15,22 +15,22 @@
         </thead>
         <tbody>
 
-            @for($i=0; $i<10;$i++)
+            @foreach($jobs as $job)
 
             <tr>
                 <td><img src="{{asset('avatar/avatar.png')}}"
                     width="80">
                 </td>
-                <td>Position: Front-End Developer
+                <td>Position: {{$job->position}}
                     <br>
-                    <i class="far fa-clock" aria-hidden="true"></i> Full-time
+                    <i class="far fa-clock" aria-hidden="true"></i> {{$job->type}}
                 </td>
-                <td><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Address: Manchester</td>
-                <td><i class="far fa-calendar-alt"></i> Date: 01/06/19</td>
+                <td><i class="fa fa-map-marker-alt" aria-hidden="true"></i> {{$job->address}}</td>
+                <td><i class="far fa-calendar-alt"></i> Posted: {{$job->created_at->diffForHumans()}}</td>
                 <td><button class="btn btn-success btn-sm">Apply</button></td>
             </tr>
 
-            @endfor
+            @endforeach
         </tbody>
        </table> 
     </div>
