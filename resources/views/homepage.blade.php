@@ -27,7 +27,11 @@
                 </td>
                 <td><i class="fa fa-map-marker-alt" aria-hidden="true"></i> {{$job->address}}</td>
                 <td><i class="far fa-calendar-alt"></i> Posted: {{$job->created_at->diffForHumans()}}</td>
-                <td><button class="btn btn-success btn-sm">Apply</button></td>
+                <td>
+                    <a href="{{route('jobs.show',[$job->id,$job->slug])}}">
+                        <button class="btn btn-success btn-sm">Apply</button>
+                    </a>
+                </td>
             </tr>
 
             @endforeach

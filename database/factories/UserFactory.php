@@ -55,6 +55,7 @@ $factory->define(App\Job::class, function (Faker $faker) {
         'type'=>'Full time',
         'status' => rand(0,1),
         'description' =>$faker->paragraph(rand(2,6)),
+        'roles'=>$faker->text,
         'last_date' =>$faker->dateTime
     ];
 });
