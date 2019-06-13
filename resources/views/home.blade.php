@@ -14,7 +14,16 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <!-- You are logged in! -->
+                    @foreach($user as $u)
+
+                        <p>{{$u->name}}</p>
+
+                    @endforeach
+                    {{$user->links()}}
+
+                    
+
                 </div>
             </div>
         </div>
