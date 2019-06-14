@@ -13,7 +13,6 @@ class JobController extends Controller
     }
 
     public function show($id,Job $job) {
-        dd($job);
         return view('jobs.show',compact('job'));
     }
 }

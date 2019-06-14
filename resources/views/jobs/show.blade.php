@@ -6,10 +6,13 @@
     
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Jobs</div>
+                <div class="card-header">{{$job->position}}</div>
 
                 <div class="card-body">
-                    
+                    <h3>Description</h3>
+                    <p>{{$job->description}}</p>
+                    <h3>Duties</h3>
+                    <p>{{$job->roles}}</p>
 
                     
 
@@ -22,7 +25,11 @@
                 <div class="card-header">Short Info</div>
 
                 <div class="card-body">
-                    
+                    <p>Company:</p>
+                    <p>Address: {{$job->address}}</p>
+                    <p>Type: {{$job->type}}</p>
+                    <p>Position: {{$job->position}}</p>
+                    <p>Posted: {{$job->created_at->diffForHumans()}}</p>
 
                     
 
